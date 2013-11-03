@@ -41,20 +41,20 @@
     UITouch *touch = [touches anyObject];
     CGPoint location = [touch locationInView: [touch view]];
     location = [[CCDirector sharedDirector] convertToGL: location];
-    
     if (CGRectContainsPoint([red boundingBox],location))
-    {
-       [[SimpleAudioEngine sharedEngine] playEffect:@"swoosh2.wav"];
-    } else if (CGRectContainsPoint([green boundingBox],location))
-    {
-        [[SimpleAudioEngine sharedEngine] playEffect:@"swoosh1.wav"];
-    } else if (CGRectContainsPoint([blue boundingBox],location))
-    {
-        [[SimpleAudioEngine sharedEngine] playEffect:@"swoosh2.wav"];
-    }
+        {
+            [[SimpleAudioEngine sharedEngine] playEffect:@"swoosh2.wav"];
+        } else if (CGRectContainsPoint([green boundingBox],location))
+            {
+                [[SimpleAudioEngine sharedEngine] playEffect:@"swoosh1.wav"];
+            } else if (CGRectContainsPoint([blue boundingBox],location))
+                {
+                    [[SimpleAudioEngine sharedEngine] playEffect:@"swoosh2.wav"];
+                }
 }
 
 - (void) ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
+    
 }
 @end
